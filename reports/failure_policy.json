@@ -1,0 +1,7 @@
+{
+  "failed_step": 7,
+  "total_steps": 10,
+  "policy": "fresh",
+  "rationale": "When step 7 (untrusted test execution) fails due to an infinite loop, fork bomb, or segmentation fault, the guest VM filesystem and memory state are untrustworthy. Resuming would risk persistent state poisoning from hostile student code. Because Celesto boots disposable microVMs in under 500ms, our policy discards the contaminated sandbox immediately, reclaims all resources, and provisions a fresh sandbox to reliably record grade deductions and finalize the audit report.",
+  "trace_path": "reports/failure_trace.jsonl"
+}

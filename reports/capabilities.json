@@ -1,0 +1,19 @@
+{
+  "capabilities": [
+    {
+      "id": "safety_hooks",
+      "why": "Celesto safety hooks intercept and evaluate commands before execution inside the guest microVM, blocking destructive operations (such as recursive directory wipes and shell fork bombs) and catching credential exfiltration commands before they touch system binaries.",
+      "evidence_path": "app/agent/safety.py"
+    },
+    {
+      "id": "network_policy",
+      "why": "Celesto network policy switches off general outbound internet access and enforces a strict local domain allowlist, effectively neutralizing prompt-injected instructions that attempt to exfiltrate environment variables and sensitive tokens to external command-and-control servers.",
+      "evidence_path": "app/agent/celesto_client.py"
+    },
+    {
+      "id": "snapshots",
+      "why": "Celesto point-in-time microVM snapshots enable clean state rollback and instant state checkpointing prior to executing risky untrusted student tests, preventing persistent disk corruption from contaminating subsequent autograding steps.",
+      "evidence_path": "app/agent/celesto_client.py"
+    }
+  ]
+}

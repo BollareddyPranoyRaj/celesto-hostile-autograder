@@ -1,0 +1,11 @@
+{"ts": "2026-10-24T05:25:01.100Z", "sandbox_name": "sbx-failuredemo1", "step": 1, "event": "boot_sandbox", "status": "ready", "boot_to_ready_s": 0.432}
+{"ts": "2026-10-24T05:25:01.620Z", "sandbox_name": "sbx-failuredemo1", "step": 2, "event": "apply_network_policy", "policy": "restricted-allowlist"}
+{"ts": "2026-10-24T05:25:02.040Z", "sandbox_name": "sbx-failuredemo1", "step": 3, "event": "attach_safety_hooks", "hooks_count": 3}
+{"ts": "2026-10-24T05:25:02.480Z", "sandbox_name": "sbx-failuredemo1", "step": 4, "event": "provision_files", "files": ["submission.py", "test_suite.py"]}
+{"ts": "2026-10-24T05:25:03.110Z", "sandbox_name": "sbx-failuredemo1", "step": 5, "event": "install_dependencies", "packages": ["pytest"]}
+{"ts": "2026-10-24T05:25:03.850Z", "sandbox_name": "sbx-failuredemo1", "step": 6, "event": "static_analysis", "prompt_injection_detected": false}
+{"ts": "2026-10-24T05:25:14.200Z", "sandbox_name": "sbx-failuredemo1", "step": 7, "event": "step_failed", "error": "Timeout: Infinite loop or process hang in submission test execution", "failed_step": 7}
+{"ts": "2026-10-24T05:25:14.350Z", "sandbox_name": "sbx-failuredemo1", "step": 8, "event": "policy_applied", "policy": "fresh", "failed_step": 7, "total_steps": 10, "action": "discard_dirty_guest_and_provision_fresh"}
+{"ts": "2026-10-24T05:25:14.800Z", "sandbox_name": "sbx-failuredemo1rec", "step": 8, "event": "fresh_sandbox_started", "old_sandbox": "sbx-failuredemo1", "new_sandbox": "sbx-failuredemo1rec"}
+{"ts": "2026-10-24T05:25:15.250Z", "sandbox_name": "sbx-failuredemo1rec", "step": 9, "event": "generate_report", "report_path": "/workspace/grade_report.json", "score": 0, "verdict": "FAILED_STEP_7_RECOVERED"}
+{"ts": "2026-10-24T05:25:15.600Z", "sandbox_name": "sbx-failuredemo1rec", "step": 10, "event": "teardown_sandbox", "status": "deleted"}

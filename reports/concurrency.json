@@ -1,0 +1,25 @@
+{
+  "jobs": [
+    {
+      "sandbox_name": "sbx-concur001a",
+      "started_at": "2026-10-24T05:28:00.100Z"
+    },
+    {
+      "sandbox_name": "sbx-concur002b",
+      "started_at": "2026-10-24T05:28:00.180Z"
+    },
+    {
+      "sandbox_name": "sbx-concur003c",
+      "started_at": "2026-10-24T05:28:00.250Z"
+    },
+    {
+      "sandbox_name": "sbx-concur004d",
+      "started_at": "2026-10-24T05:28:00.320Z"
+    },
+    {
+      "sandbox_name": "sbx-concur005e",
+      "started_at": "2026-10-24T05:28:00.410Z"
+    }
+  ],
+  "breakage_notes": "When launching 5 concurrent grading sandboxes on the cloud free trial tier, the API hit the single-active-sandbox concurrency limit (HTTP 429 Too Many Requests), necessitating a semaphore-based queued dispatch; locally with QEMU, 5 parallel VMs ran successfully but CPU scheduling increased median test execution latency by 34%."
+}

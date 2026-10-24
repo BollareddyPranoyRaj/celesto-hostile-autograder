@@ -1,0 +1,6 @@
+{
+  "who": "Computer science university professors and teaching assistants grading hundreds of untrusted student code submissions per semester.",
+  "agent_work": "Executes untrusted student code inside isolated microVM sandboxes, enforces network policies and safety hooks, executes unit test suites, detects prompt injection exploits, and compiles structured grading evaluations.",
+  "proof_output": "Detailed grading breakdown with verified test outputs, code feedback, and a security containment log.",
+  "idea_source": "idea_bank"
+}
